@@ -38,9 +38,10 @@ non_trans = filter(taipei_mrt_station, !isTransfer(s=Zh_tw))
 mrt = ggplot()+
   ggtitle("台北捷運路網圖")+
   labs(color="路線")+
-  theme(text=element_text(family="Noto Sans CJK TC"),
+  theme(axis.title=element_blank(),
+        text=element_text(family="Noto Sans CJK TC"),
         plot.title = element_text(hjust = 0.5),
-        panel.background=element_blank())
+        panel.background=element_blank())+
 
 # Background
 mrt = mrt + 
