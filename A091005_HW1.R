@@ -1,6 +1,12 @@
 # NYCU TLM 110-1 Public Transport GIS Assignment 1
 # A091005 Ping-yu Chou
 
+library(sf)
+library(ggplot2)
+library(dplyr)
+library(ggsflabel)
+library(TWspdata)
+
 ## Task 1
 ggplot()+
   geom_sf(data=taipei_village_map, aes(fill=PP))+
@@ -41,7 +47,7 @@ mrt = ggplot()+
   theme(axis.title=element_blank(),
         text=element_text(family="Noto Sans CJK TC"),
         plot.title = element_text(hjust = 0.5),
-        panel.background=element_blank())+
+        panel.background=element_blank())
 
 # Background
 mrt = mrt + 
